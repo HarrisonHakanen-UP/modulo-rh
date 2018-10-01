@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: universidade
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: math
+Implementation-Vendor-Id: br.edu.up.universidade
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+
