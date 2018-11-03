@@ -2,7 +2,7 @@
 
 ### Rotas
 
-1. Servico departamento:
+1. Serviço departamento:
   - POST Salva um Departamento: http://localhost:8080/departamento/post
   - GET  Retorna uma lista de Departamentos: http://localhost:8080/departamento/json
   - DELETE Deleta um Departamento: http://localhost:8080/departamento/delete
