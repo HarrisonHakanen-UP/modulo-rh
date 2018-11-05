@@ -8,9 +8,9 @@ br/edu/up/jpa/dominio/Employee.class
 br/edu/up/jpa/repository/EmployeeRepository.class
 br/edu/up/jpa/repository/EmployeeDepartmentHistoryRepository.class
 br/edu/up/jpa/controller/ServiceInstanceRestController.class
-br/edu/up/jpa/resources/DepartmentResource.class
-br/edu/up/jpa/dominio/JobCandidate.class
 br/edu/up/jpa/Programa.class
+br/edu/up/jpa/dominio/JobCandidate.class
+br/edu/up/jpa/resources/DepartmentResource.class
 br/edu/up/jpa/repository/JobCandidateRepository.class
 br/edu/up/jpa/dominio/Shift.class
 br/edu/up/jpa/resources/EmployeeResource.class

@@ -33,7 +33,6 @@ public class EmployeeDepartmentHistory {
 	@JoinColumn
 	private Shift shift;
 
-
 	public EmployeeDepartmentHistory(Integer businessEntityID, Date startDate, Date endDate, Date modifiedDate,
 			Department department, Employee employee, Shift shift) {
 		super();
@@ -105,6 +104,5 @@ public class EmployeeDepartmentHistory {
 	public void setShift(Shift shift) {
 		this.shift = shift;
 	}
-	
-	
+
 }

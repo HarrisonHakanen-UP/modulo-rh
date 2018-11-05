@@ -1,9 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: universidade
+Implementation-Title: RH
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: math
+Built-By: phgbecker
 Implementation-Vendor-Id: br.edu.up.universidade
-Build-Jdk: 1.8.0_171
-Implementation-URL: http://maven.apache.org
+Build-Jdk: 1.8.0_162
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/modulo-rh
 Created-By: Maven Integration for Eclipse
 

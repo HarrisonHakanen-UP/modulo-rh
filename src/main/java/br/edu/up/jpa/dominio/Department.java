@@ -17,30 +17,29 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Department")
 public class Department {
-	
+
 	@Id
-    @GeneratedValue
+	@GeneratedValue
 	private Integer departamentID;
-	
+
 	@Column
 	private String name;
-	
+
 	@Column
 	private String groupName;
-	
+
 	@Column
 	private Date modifiedDate;
-	
 
-	public Department(Integer departamentID,String name, String groupName, Date modifiedDate) {
-		this.departamentID=departamentID;
+	public Department(Integer departamentID, String name, String groupName, Date modifiedDate) {
+		this.departamentID = departamentID;
 		this.name = name;
 		this.groupName = groupName;
 		this.modifiedDate = modifiedDate;
 	}
 
 	protected Department() {
-		
+
 	}
 
 	public Integer getDepartamentID() {

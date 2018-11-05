@@ -22,52 +22,56 @@ import br.edu.up.jpa.repository.JobCandidateRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(value="")
+@Api(value = "")
 @RestController
 @RequestMapping("/empregado")
 public class EmployeeResource {
-	
+
 	@Autowired
 	private EmployeeRepository empregadoRepository;/*
-	private EmployeeDepartmentHistoryRepository empregadoDepartamentoRepository;
-	private EmployeePayHistoryRepository empregadoPagamentoRepository;
-	private JobCandidateRepository candidatoEmprego;*/
-	
-	@ApiOperation(value="Salva um Empregado")
+													 * private EmployeeDepartmentHistoryRepository
+													 * empregadoDepartamentoRepository; private
+													 * EmployeePayHistoryRepository empregadoPagamentoRepository;
+													 * private JobCandidateRepository candidatoEmprego;
+													 */
+
+	@ApiOperation(value = "Salva um Empregado")
 	@PostMapping("/empregado/post")
 	public Employee postEmpregado(@RequestBody @Valid Employee empregado) {
 		return empregadoRepository.save(empregado);
 	}
-	
-	@ApiOperation(value="Retorna uma lista de Empregados")
-	@GetMapping(produces="empregado/json")
-	public @ResponseBody Iterable<Employee> listaEmpregados(){
+
+	@ApiOperation(value = "Retorna uma lista de Empregados")
+	@GetMapping(produces = "empregado/json")
+	public @ResponseBody Iterable<Employee> listaEmpregados() {
 		Iterable<Employee> listaEmpregados = empregadoRepository.findAll();
 		return listaEmpregados;
 	}
 	/*
-	@ApiOperation(value="Retorna uma lista de Empregados por Departamento")
-	@GetMapping(produces="empregado/departamentos/json")
-	public @ResponseBody Iterable<EmployeeDepartmentHistory> listaEmpregadosDepartamentos(){
-		Iterable<EmployeeDepartmentHistory> listaEmpregadosDepartamentos = empregadoDepartamentoRepository.findAll();
-		return listaEmpregadosDepartamentos;
-	}
-	
-	@ApiOperation(value="Retorna uma lista de Pagamentos dos Empregados")
-	@GetMapping(produces="empregado/pagamentos/json")
-	public @ResponseBody Iterable<EmployeePayHistory> listaPagamentosEmpregados(){
-		Iterable<EmployeePayHistory> listaPagamentosEmpregados = empregadoPagamentoRepository.findAll();
-		return listaPagamentosEmpregados;
-	}
-	
-	@ApiOperation(value="Retorna uma lista de Candidatos ao Emprego")
-	@GetMapping(produces="empregado/candidatos/json")
-	public @ResponseBody Iterable<JobCandidate> listaCandidatosEmprego(){
-		Iterable<JobCandidate> listaCandidatosEmprego = candidatoEmprego.findAll();
-		return listaCandidatosEmprego;
-	}*/
-	
-	@ApiOperation(value="Deleta um Empregado")
+	 * @ApiOperation(value="Retorna uma lista de Empregados por Departamento")
+	 * 
+	 * @GetMapping(produces="empregado/departamentos/json") public @ResponseBody
+	 * Iterable<EmployeeDepartmentHistory> listaEmpregadosDepartamentos(){
+	 * Iterable<EmployeeDepartmentHistory> listaEmpregadosDepartamentos =
+	 * empregadoDepartamentoRepository.findAll(); return
+	 * listaEmpregadosDepartamentos; }
+	 * 
+	 * @ApiOperation(value="Retorna uma lista de Pagamentos dos Empregados")
+	 * 
+	 * @GetMapping(produces="empregado/pagamentos/json") public @ResponseBody
+	 * Iterable<EmployeePayHistory> listaPagamentosEmpregados(){
+	 * Iterable<EmployeePayHistory> listaPagamentosEmpregados =
+	 * empregadoPagamentoRepository.findAll(); return listaPagamentosEmpregados; }
+	 * 
+	 * @ApiOperation(value="Retorna uma lista de Candidatos ao Emprego")
+	 * 
+	 * @GetMapping(produces="empregado/candidatos/json") public @ResponseBody
+	 * Iterable<JobCandidate> listaCandidatosEmprego(){ Iterable<JobCandidate>
+	 * listaCandidatosEmprego = candidatoEmprego.findAll(); return
+	 * listaCandidatosEmprego; }
+	 */
+
+	@ApiOperation(value = "Deleta um Empregado")
 	@DeleteMapping("/empregado/delete")
 	public Employee deletaEmpregado(@RequestBody Employee empregado) {
 		empregadoRepository.delete(empregado);

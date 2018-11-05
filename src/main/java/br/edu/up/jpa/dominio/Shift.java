@@ -17,20 +17,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Shift")
 public class Shift {
-	
+
 	@Id
-    @GeneratedValue
+	@GeneratedValue
 	private Integer shiftID;
-	
+
 	@Column
 	private String name;
-	
+
 	@Column
 	private Time startTime;
-	
+
 	@Column
 	private Time endTime;
-	
+
 	@Column
 	private Date modifiedDate;
 
@@ -44,7 +44,7 @@ public class Shift {
 	}
 
 	protected Shift() {
-		
+
 	}
 
 	public Integer getShiftID() {
@@ -85,5 +85,5 @@ public class Shift {
 
 	public void setModifiedDate(Date modifiedDate) {
 		this.modifiedDate = modifiedDate;
-	}	
+	}
 }
